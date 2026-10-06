@@ -1,0 +1,19 @@
+h1 {color: purple;}
+p {
+    font-size: 2em;
+    font-family: times new roman;
+    font-weight: bolder;
+    text-decoration: underline;
+}
+
+
+p, h2{color: blue;}
+
+
+p a{color:red;}
+
+
+
+#welcome {color:orangered}
+
+.doublesize {font-size: 2em}
