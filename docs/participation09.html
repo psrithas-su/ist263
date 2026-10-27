@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Participation 09</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .small-message {
+            display: none;
+        }
+
+        @media only screen and (max-width: 800px) and (max-height: 800px) {
+            .large-message {
+                display: none;
+            }
+
+            .small-message {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <p class="large-message">Im Large</p>
+    <p class="small-message">Im Small</p>
+</body>
+</html>
