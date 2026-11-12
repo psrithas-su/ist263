@@ -40,6 +40,10 @@ nav a:hover {
     gap: 20px;
 }
 
+.row2 {
+    flex-wrap: wrap;
+}
+
 .column {
     flex: 1;
     min-width: 0;
@@ -94,10 +98,22 @@ nav a:hover {
     border: 0;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
     .row1, .row2 {
         flex-direction: column;
     }
+
+    nav a {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    nav span {
+        display: none;
+    }
+
 }
 
 .linkedin-logo {
@@ -105,4 +121,8 @@ nav a:hover {
     height: auto;
     vertical-align: middle;
     margin-left: 10px;
+}
+
+.banner-img {
+    max-width: 100%;
 }
