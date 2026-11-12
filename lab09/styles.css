@@ -1,0 +1,108 @@
+
+body {
+    background-color: #F5F7FA;
+    color: #222222;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    color: #2456A6;
+}
+
+h1, h2 {
+    color: #17365D;
+}
+
+nav {
+    background-color: #17365D;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+nav a {
+    color: #FFFFFF;
+}
+
+nav a:hover {
+    background-color: #3978C6;
+}
+
+.motto {
+    float: right;
+}
+
+.row1, .row2 {
+    display: flex;
+    background-color: #E3EBF5;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px;
+    gap: 20px;
+}
+
+.column {
+    flex: 1;
+    min-width: 0;
+}
+
+/* Contact Form Styling */
+
+.row2 form {
+    padding: 10px;
+}
+
+.row2 input[type="text"],
+.row2 input[type="email"],
+.row2 textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #999999;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.row2 textarea {
+    height: 120px;
+}
+
+.row2 fieldset {
+    border: 1px solid #999999;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.row2 input[type="submit"] {
+    background-color: #17365D;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.row2 input[type="submit"]:hover {
+    background-color: #3978C6;
+}
+
+/* Google Map Styling */
+
+.row2 iframe {
+    width: 100%;
+    min-height: 350px;
+    border: 0;
+}
+
+@media (max-width: 700px) {
+    .row1, .row2 {
+        flex-direction: column;
+    }
+}
+
+.linkedin-logo {
+    width: 30px;
+    height: auto;
+    vertical-align: middle;
+    margin-left: 10px;
+}
