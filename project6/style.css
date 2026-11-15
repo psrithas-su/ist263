@@ -1,0 +1,365 @@
+/* ==========================================================
+   NBA Stats Hub - style.css
+   Peniel Srithas - IST 263 Project Milestone 6
+
+   Color palette
+   Navy  #0b1f3a  - header, footer, table header
+   Blue  #1d428a  - headings, buttons, card borders
+   Red   #c8102e  - accents and hover states
+   Light #f4f6f9  - page background
+   Pale blue #e3edf9 - banner and player cards (from wireframe)
+   ========================================================== */
+
+
+/* ---------- Base styles (all pages) ---------- */
+
+/* Padding and borders are included in an element's width,
+   so boxes never grow wider than we tell them to */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    background-color: #f4f6f9;
+    color: #222222;
+    line-height: 1.5;
+    overflow-wrap: break-word; /* long URLs wrap instead of sticking out */
+}
+
+h1,
+h2,
+h3 {
+    color: #1d428a;
+    line-height: 1.2;
+}
+
+a {
+    color: #1d428a;
+}
+
+a:hover,
+a:focus {
+    color: #c8102e;
+}
+
+/* Images shrink to fit their container on small screens */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+figure {
+    margin: 16px 0;
+}
+
+figcaption {
+    font-size: 0.85rem;
+    color: #555555;
+}
+
+
+/* ---------- Header and navigation (all pages) ---------- */
+
+/* Flexbox puts the brand on the left and the links on the right */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    background-color: #0b1f3a;
+    padding: 12px 24px;
+    border-bottom: 4px solid #c8102e;
+}
+
+.brand {
+    margin: 0;
+    color: #ffffff;
+    font-size: 1.25rem;
+    letter-spacing: 1px;
+}
+
+.site-header nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.site-header nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-bottom: 3px solid transparent;
+}
+
+.site-header nav a:hover,
+.site-header nav a:focus {
+    color: #ffffff;
+    background-color: #1d428a;
+}
+
+/* Highlights the page you are currently on */
+.site-header nav a[aria-current="page"] {
+    border-bottom-color: #c8102e;
+}
+
+
+/* ---------- Main content area (all pages) ---------- */
+
+/* Keeps content from stretching too wide and centers it */
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 24px 16px;
+}
+
+main section {
+    background-color: #ffffff;
+    padding: 24px;
+    margin-bottom: 24px;
+    border-radius: 8px;
+}
+
+
+/* ---------- Forms and buttons (all pages) ---------- */
+
+input[type="search"],
+select {
+    font-size: 1rem;
+    padding: 8px;
+    border: 1px solid #6b7280;
+    border-radius: 4px;
+}
+
+button {
+    font-size: 1rem;
+    padding: 8px 16px;
+    color: #ffffff;
+    background-color: #1d428a;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover,
+button:focus {
+    background-color: #c8102e;
+}
+
+
+/* ---------- Footer (all pages) ---------- */
+
+footer {
+    background-color: #0b1f3a;
+    color: #ffffff;
+    text-align: center;
+    padding: 16px;
+}
+
+footer a,
+footer a:hover,
+footer a:focus {
+    color: #ffffff;
+}
+
+footer a:hover,
+footer a:focus {
+    text-decoration: none;
+}
+
+
+/* ==========================================================
+   Compare Players page
+   ========================================================== */
+
+/* Heading banner at the top of the page */
+.intro-banner {
+    background-color: #e3edf9;
+    text-align: center;
+}
+
+.intro-banner h1 {
+    margin-top: 0;
+    font-size: 2.25rem;
+}
+
+/* Season dropdown sits on the right, like the wireframe */
+.season-select {
+    text-align: right;
+}
+
+.season-select label {
+    font-weight: bold;
+}
+
+/* FLEXBOX: the two player cards side by side */
+.player-row {
+    display: flex;
+    gap: 24px;
+}
+
+/* flex: 1 makes both cards grow equally, so they are the same width */
+.player-card {
+    flex: 1;
+    background-color: #e3edf9;
+    padding: 20px;
+    border-radius: 8px;
+    border-top: 5px solid #1d428a;
+}
+
+.player-card h2 {
+    margin-top: 0;
+    font-size: 1.75rem;
+    text-align: center;
+}
+
+.player-card h3 {
+    text-align: center;
+}
+
+.player-card label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.player-card input[type="search"] {
+    width: 100%;
+}
+
+/* White statistics box inside each card */
+.stat-list {
+    background-color: #ffffff;
+    margin: 0;
+    padding: 8px 16px;
+    border-radius: 4px;
+}
+
+/* Each stat row: name on the left, value on the right */
+.stat-list div {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #dde3ec;
+}
+
+.stat-list div:last-child {
+    border-bottom: none;
+}
+
+.stat-list dd {
+    margin: 0;
+    font-weight: bold;
+}
+
+/* Large centered Compare button */
+.compare-action {
+    text-align: center;
+    margin-top: 24px;
+}
+
+.compare-button {
+    font-size: 1.15rem;
+    padding: 14px 48px;
+    border-radius: 6px;
+}
+
+.guide-link {
+    text-align: center;
+}
+
+/* Lets the table scroll sideways inside its own box
+   instead of making the whole page scroll */
+.table-wrapper {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    min-width: 300px;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #dde3ec;
+    text-align: left;
+}
+
+thead th {
+    background-color: #0b1f3a;
+    color: #ffffff;
+}
+
+td {
+    text-align: center;
+}
+
+
+/* ==========================================================
+   MEDIA QUERY: screens 700px wide or smaller (phones)
+   ========================================================== */
+
+@media (max-width: 700px) {
+
+    /* Stack the brand above the links, and center the links */
+    .site-header {
+        flex-direction: column;
+        padding: 12px 16px;
+    }
+
+    .site-header nav {
+        justify-content: center;
+    }
+
+    main {
+        padding: 16px 12px;
+    }
+
+    main section {
+        padding: 16px;
+    }
+
+    .intro-banner h1 {
+        font-size: 1.75rem;
+    }
+
+    /* Season dropdown goes full width */
+    .season-select {
+        text-align: left;
+    }
+
+    .season-select label {
+        display: block;
+        margin-bottom: 4px;
+    }
+
+    .season-select select {
+        width: 100%;
+    }
+
+    /* Stack the player cards on top of each other */
+    .player-row {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .player-card h2 {
+        font-size: 1.5rem;
+    }
+
+    /* Button fills the screen width */
+    .compare-button {
+        width: 100%;
+        padding: 14px 16px;
+    }
+
+    th,
+    td {
+        padding: 8px;
+        font-size: 0.95rem;
+    }
+}

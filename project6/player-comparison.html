@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Peniel Srithas - Compare Players</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <p class="brand"><strong>NBA STATS HUB</strong></p>
+
+        <nav aria-label="Main">
+            <a href="index.html">Home</a>
+            <a href="player-comparison.html" aria-current="page">Compare Players</a>
+            <a href="stats-guide.html">Stats Guide</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="intro-banner">
+            <h1>Compare Players</h1>
+
+            <p>
+                Type in two player names and hit compare. Their stats show up next to each other so you can see them at the same time.
+            </p>
+
+            <figure>
+                <img src="images/nba-game.jpg" alt="A Cleveland Cavaliers player shoots over a Dallas Mavericks defender during an NBA game" width="500">
+                <figcaption>Erik Drost, “Cleveland Cavaliers vs. Dallas Mavericks,” CC BY 2.0, via Wikimedia Commons</figcaption>
+            </figure>
+        </section>
+
+        <section>
+            <form>
+                <p class="season-select">
+                    <label for="season">Season:</label>
+                    <select id="season" name="season">
+                        <option value="2025-26">2025-26</option>
+                    </select>
+                </p>
+
+                <!-- Flex container: the two player cards sit side by side -->
+                <div class="player-row">
+
+                    <div class="player-card">
+                        <h2>Player 1</h2>
+
+                        <p>
+                            <label for="player1">Search Player:</label>
+                            <input type="search" id="player1" name="player1" placeholder="Search Player">
+                        </p>
+
+                        <h3>Player Statistics</h3>
+
+                        <dl class="stat-list">
+                            <div>
+                                <dt>Points</dt>
+                                <dd>–</dd>
+                            </div>
+                            <div>
+                                <dt>Rebounds</dt>
+                                <dd>–</dd>
+                            </div>
+                            <div>
+                                <dt>Assists</dt>
+                                <dd>–</dd>
+                            </div>
+                            <div>
+                                <dt>FG%</dt>
+                                <dd>–</dd>
+                            </div>
+                            <div>
+                                <dt>3PT%</dt>
+                                <dd>–</dd>
+                            </div>
+                            <div>
+                                <dt>PER</dt>
+                                <dd>–</dd>
+                            </div>
+                            <div>
+                                <dt>TS%</dt>
+                                <dd>–</dd>
+                            </div>
+                        </dl>
+                    </div>
+
+                    <div class="player-card">
+                        <h2>Player 2</h2>
+
+                        <p>
+                            <label for="player2">Search Player:</label>
+                            <input type="search" id="player2" name="player2" placeholder="Search Player">
+                        </p>
+
+                        <h3>Player Statistics</h3>
+
+                        <dl class="stat-list">
+                            <div>
+                                <dt>Points</dt>
+                                <dd>–</dd>
+                            </div>
+                            <div>
+                                <dt>Rebounds</dt>
+                                <dd>–</dd>
+                            </div>
+                            <div>
+                                <dt>Assists</dt>
+                                <dd>–</dd>
+                            </div>
+                            <div>
+                                <dt>FG%</dt>
+                                <dd>–</dd>
+                            </div>
+                            <div>
+                                <dt>3PT%</dt>
+                                <dd>–</dd>
+                            </div>
+                            <div>
+                                <dt>PER</dt>
+                                <dd>–</dd>
+                            </div>
+                            <div>
+                                <dt>TS%</dt>
+                                <dd>–</dd>
+                            </div>
+                        </dl>
+                    </div>
+
+                </div>
+
+                <p class="compare-action">
+                    <button type="submit" class="compare-button">Compare Players</button>
+                </p>
+            </form>
+
+            <p class="guide-link">
+                Not sure what a stat means? See the <a href="stats-guide.html"><strong>Stats Guide</strong> →</a>
+            </p>
+        </section>
+
+        <section>
+            <h2>Side-by-Side Summary</h2>
+
+            <p>
+                Once you search, you’ll see both players’ stats side by side, including:
+            </p>
+
+            <!-- Wrapper lets the table scroll sideways on small screens -->
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">Stat</th>
+                            <th scope="col">Player 1</th>
+                            <th scope="col">Player 2</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Points per game</th>
+                            <td>–</td>
+                            <td>–</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Rebounds per game</th>
+                            <td>–</td>
+                            <td>–</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Assists per game</th>
+                            <td>–</td>
+                            <td>–</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Field goal percentage</th>
+                            <td>–</td>
+                            <td>–</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Three point percentage</th>
+                            <td>–</td>
+                            <td>–</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Player Efficiency Rating (PER)</th>
+                            <td>–</td>
+                            <td>–</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">True shooting percentage</th>
+                            <td>–</td>
+                            <td>–</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>
+            NBA Stats Hub |
+            <a href="index.html">Home</a> |
+            <a href="player-comparison.html">Compare Players</a> |
+            <a href="stats-guide.html">Stats Guide</a>
+        </p>
+    </footer>
+
+</body>
+
+</html>
